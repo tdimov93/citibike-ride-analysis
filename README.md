@@ -95,6 +95,8 @@ get to the bottom of this
 There simply aren't enough "rainy rides" in the example datasets to justify the charts that the program currently generates so it might be
 a good idea to find a more relevant way of visualizing the information
 
+- Add unit tests: yikes
+
 ## Built With
 
   - [Python3](https://www.python.org/) - Code
