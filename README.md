@@ -1,4 +1,4 @@
-# City Rides - NY bike rides analysis
+# Citibike Rides - NY bike rides analysis
 
 The general idea is to merge a given citibike dataset with a weather dataset for the same time frame and
 attempt to extract relevant stats such as the impact of weather on bike rides.
@@ -84,8 +84,10 @@ The nodes can then independently perform the necessary operations for every data
 the information at the time a given ride starts. It could be useful to also look at the conditions at the end (and perhaps during) the ride.
 The time of day is also something that can have a significant impact on the outcome since weather conditions at night are far less likely to
 affect bike rides (the majority of which take place during the day)
+It is also worth mentioning that when talking about "clear weather conditions" what that really here means is **non-rainy weather conditions**, which
+technically means that snowy weather would count as clear weather conditions, as it currently stands. This might be something worth updating
 
-- Input flexibility: when launched, the program will analyze the 3 example dataset pairs found in the `datasets/` folder and exit. It would
+- Input flexibility: when launched, the program will analyze the 3 (hardcoded) example dataset pairs found in the `datasets/` folder and exit. It would
 be useful to allow for variable input
 
 - Chart generation: the `plt.save_fig` call does not act in a consistent manner and sometimes generates strange/empty charts. Should probably
