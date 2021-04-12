@@ -67,7 +67,15 @@ OR alternatively: running the python3 app directly:
 ### Example output
 
 ![Analysis Report](/images/example_output.png)
+
+Most of the information inccluded in the JSON report is pretty self-explanatory, with the exception perhaps of
+the rain percentages.
+The basic idea is to establish the % of rain time based on the weather data for the given period and compare it
+to the % of bike rides **started** in rainy weather conditions. In an ideal (and severely oversimplified) world,
+the impact of rain could be measured by the ratio of these 2 percentages.
+
 ![Trip Duration Chart](/images/trip_duration_chart.png)
+
 ![Gender Repartition Piechart](/images/gender_repartition_piechart.png)
 
 The JSON report as well as the generated charts are saved in the `output/` directory
@@ -83,7 +91,8 @@ The nodes can then independently perform the necessary operations for every data
 - Increase the depth of analysis. As it currently stands, the only thing taken into account with regards to the weather conditions is
 the information at the time a given ride starts. It could be useful to also look at the conditions at the end (and perhaps during) the ride.
 The time of day is also something that can have a significant impact on the outcome since weather conditions at night are far less likely to
-affect bike rides (the majority of which take place during the day)
+affect bike rides (the majority of which take place during the day).
+
 It is also worth mentioning that when talking about "clear weather conditions" what that really here means is **non-rainy weather conditions**, which
 technically means that snowy weather would count as clear weather conditions, as it currently stands. This might be something worth updating
 
@@ -91,7 +100,8 @@ technically means that snowy weather would count as clear weather conditions, as
 be useful to allow for variable input
 
 - Chart generation: the `plt.save_fig` call does not act in a consistent manner and sometimes generates strange/empty charts. Should probably
-get to the bottom of this
+get to the bottom of this.
+
 There simply aren't enough "rainy rides" in the example datasets to justify the charts that the program currently generates so it might be
 a good idea to find a more relevant way of visualizing the information
 
